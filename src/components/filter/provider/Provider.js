@@ -1,67 +1,17 @@
 import React from 'react'
 import ProviderCard from '../../cards/ProviderCard'
+// import { Filters } from '../../../constants/DUMMY_DATA'
 
-const Provider = () =>
+const Provider = ({ filterdata }) =>
 {
-    const providerdata = [
-
-        {
-            logo: 'logo',
-            name: 'Abhishek Singh , Software Developer',
-            address: 'H-149 , Sector - 63 , Noida',
-            npiNumber: 'NPI number 12345',
-            totalPatients: 'Total Patient 1234',
-            medicare: 'Medicare $50'
-        },
-        {
-            logo: 'logo',
-            name: 'Abhishek Singh , Software Developer',
-            address: 'H-149 , Sector - 63 , Noida',
-            npiNumber: 'NPI number 12345',
-            totalPatients: 'Total Patient 1234',
-            medicare: 'Medicare $50'
-        },
-        {
-            logo: 'logo',
-            name: 'Abhishek Singh , Software Developer',
-            address: 'H-149 , Sector - 63 , Noida',
-            npiNumber: 'NPI number 12345',
-            totalPatients: 'Total Patient 1234',
-            medicare: 'Medicare $50'
-        },
-        {
-            logo: 'logo',
-            name: 'Abhishek Singh , Software Developer',
-            address: 'H-149 , Sector - 63 , Noida',
-            npiNumber: 'NPI number 12345',
-            totalPatients: 'Total Patient 1234',
-            medicare: 'Medicare $50'
-        },
-        {
-            logo: 'logo',
-            name: 'Abhishek Singh , Software Developer',
-            address: 'H-149 , Sector - 63 , Noida',
-            npiNumber: 'NPI number 12345',
-            totalPatients: 'Total Patient 1234',
-            medicare: 'Medicare $50'
-        },
-        {
-            logo: 'logo',
-            name: 'Abhishek Singh , Software Developer',
-            address: 'H-149 , Sector - 63 , Noida',
-            npiNumber: 'NPI number 12345',
-            totalPatients: 'Total Patient 1234',
-            medicare: 'Medicare $50'
-        },
 
 
 
-    ]
     return (
         <div className="provider">
             <div className="container ">
-                { providerdata.map(data => (
-                    <ProviderCard data={ data } />
+                { filterdata?.map((data, index) => (
+                    <ProviderCard key={ `${index}+12` } data={ data } />
                 )) }
             </div>
         </div>
